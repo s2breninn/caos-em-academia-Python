@@ -4,27 +4,16 @@ _"As principais transformações da sociedade são causadas por minorias barulhe
 
 ----
 
-Programa em python que simula dois tipos de pessoas em uma academia, onde:
-- Um tipo é organizada;
-- Outro tipo desorganizada
+Este é um programa em Python que simula o comportamento de dois tipos de frequentadores em uma academia: 
+- Tipo 1: Organizado
+- Tipo 2: Desorganizado
 
-Com isso, o resultado final do programa é a probabilidade de certa quantidade de pessoas desorganizadas na academia poderia causar um "caos".
+O resultado final do programa é a probabilidade de que uma certa quantidade de pessoas desorganizadas na academia possa causar um estado de "caos".
 
-Ex.: Entre 20 pessoas sendo elas 2 bagunceiras qual a probabilidade que no final do dia a academia vai está desarumada
+Exemplo: Entre 20 pessoas, sendo 2 desorganizadas, qual é a probabilidade de a academia ficar desorganizada no final do dia?
 
-#### Tipo 1:
-- A pessoa organizada guardará o haltere no porta haltere onde ela pegou, ou seja, no lugar certo onde o número do haltere e o porta se coincidem. Mas se caso o lugar em que o equipamento deveria ficar estiver certo ela irá guardar em qualquer outro local que esteja livre;
+#### Comportamento do Tipo 1 (Organizado):
+- A pessoa organizada irá devolver o haltere (peso) no suporte correspondente ao local de onde o pegou, ou seja, no local designado onde o número do haltere (peso) e a posição do suporte coincidem. Se o local estiver ocupado, ela guardará o equipamento em qualquer outro lugar disponível.  
     
-#### Tipo 2:
-- O individuo bagunceiro pega o peso, mas ele vai colocar de forma aleatoria em qualquer lugar.
-
-----
-
-#### Estrutura de dados:
-        porta_halteres: {
-            10: 10,
-            12: 12,
-            14: 14,
-            16: 16,
-            ...:...,
-        }
+#### Comportamento do Tipo 2 (Desorganizado):  
+- O indivíduo desorganizado pega o peso e o coloca de forma aleatória em qualquer lugar.  
