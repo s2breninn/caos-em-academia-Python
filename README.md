@@ -20,8 +20,10 @@ Exemplo: Entre 20 pessoas, sendo 2 desorganizadas, qual é a probabilidade de a 
 
 #### Resultado final
 Mostrará uma média de duas pessoas do tipo desorganizada entre 12 do organizada.  
-Resultado em gráfico. Cada barra representa a probabilidade de cada dia e tendo como legenda abaixo do gráfico informando a média durante 30 dia.
+Resultado em gráfico. Cada barra representa a probabilidade de cada dia e tendo como legenda abaixo do gráfico informando a média durante 30 dia.  
+
+![image](https://github.com/s2breninn/caos-em-academia-Python/assets/89087720/0d799d66-79f4-4575-b1a2-78e6e6a5f279)  
 
 ---
 
-__Futuramente pretendo aprimorar esse projeto para ser dinâmico com entrada de dados e análise de mais dados_
+_Futuramente pretendo aprimorar esse projeto para ser dinâmico com entrada de dados e análise de mais dados_
