@@ -17,3 +17,11 @@ Exemplo: Entre 20 pessoas, sendo 2 desorganizadas, qual é a probabilidade de a 
     
 #### Comportamento do Tipo 2 (Desorganizado):  
 - O indivíduo desorganizado pega o peso e o coloca de forma aleatória em qualquer lugar.  
+
+#### Resultado final
+Mostrará uma média de duas pessoas do tipo desorganizada entre 12 do organizada.  
+Resultado em gráfico. Cada barra representa a probabilidade de cada dia e tendo como legenda abaixo do gráfico informando a média durante 30 dia.
+
+---
+
+__Futuramente pretendo aprimorar esse projeto para ser dinâmico com entrada de dados e análise de mais dados_
