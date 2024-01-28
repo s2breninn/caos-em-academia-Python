@@ -26,7 +26,7 @@ class Academia:
 
     def calcular_caos(self):
         num_caos = [i for i, j in self.porta_halteres.items() if i != j]  # Se eles estiverem foram do lugar
-        return len(num_caos) / len(self.porta_halteres)
+        return round((len(num_caos) / len(self.porta_halteres)) * 100, 2)
 
 class Usuario:
     def __init__(self, tipo, academia):
@@ -57,20 +57,21 @@ class Usuario:
 academia = Academia()
 
 usuarios = [Usuario(1, academia) for i in range(10)]
-usuarios += [Usuario(2, academia) for i in range(1)]
+usuarios += [Usuario(2, academia)]
 random.shuffle(usuarios)
 
 list_caos = []
+day = 0
+list_day = []
 
-for k in range(50):
-    academia.reiniciar_o_dia()
-    for i in range(10):
-        random.shuffle(usuarios)
-        for user in usuarios:
-            user.iniciar_treino()
-        for user in usuarios:
-            user.finalizar_treino()
-
+for k in range(30):
+    random.shuffle(usuarios)
+    for user in usuarios:
+        user.iniciar_treino()
+    for user in usuarios:
+        user.finalizar_treino()
+    day += 1
+    list_day.append(day)
     list_caos += [academia.calcular_caos()]
 
-print(list_caos)
+sns.displot(list_caos)
