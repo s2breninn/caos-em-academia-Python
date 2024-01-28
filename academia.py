@@ -1,4 +1,5 @@
 import random
+import matplotlib.pyplot as plt
 
 class Academia:
     def __init__(self):
@@ -26,7 +27,7 @@ class Academia:
 
     def calcular_caos(self):
         num_caos = [i for i, j in self.porta_halteres.items() if i != j]  # Se eles estiverem foram do lugar
-        return round((len(num_caos) / len(self.porta_halteres)) * 100, 2)
+        return round(len(num_caos) / len(self.porta_halteres) * 100, 2)
 
 class Usuario:
     def __init__(self, tipo, academia):
@@ -61,17 +62,37 @@ usuarios += [Usuario(2, academia)]
 random.shuffle(usuarios)
 
 list_caos = []
-day = 0
 list_day = []
+day = 0
 
-for k in range(30):
+for i in range(30):
     random.shuffle(usuarios)
     for user in usuarios:
         user.iniciar_treino()
     for user in usuarios:
         user.finalizar_treino()
+
     day += 1
     list_day.append(day)
     list_caos += [academia.calcular_caos()]
 
-sns.displot(list_caos)
+# Calculo média 30 dias
+media_caos = round(sum(list_caos) / len(list_caos) * 100, 2)
+
+# Plotar as barras
+plt.bar(list_day, list_caos)
+
+# Adicionar os valores nas barras
+for i in range(len(list_day)):
+    plt.text(list_day[i], list_caos[i], str(list_caos[i]), ha='center', va='bottom', fontsize=8)
+
+# Configurações do gráfico
+plt.title('Estatística com 2 pessoa desorganizada entre 12 em uma academia')
+plt.xlabel('Dias')
+plt.ylabel('Porcentagem')
+plt.ylim(0, 100)
+
+# Adicionar legenda personalizada
+plt.text(0.5, -0.1, f'A média da probabilidade em que a academia estará desorganizada em 30 dias com 2 pessoas do tipo 2 e 10 do tipo 1 é de {media_caos}%', ha='center', va='center', fontsize=10, transform=plt.gca().transAxes)
+
+plt.show()
